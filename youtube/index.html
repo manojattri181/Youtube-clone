@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You-Tube</title>
+    <script src="https://kit.fontawesome.com/704b7699b4.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  href="">
+</head>
+<style>
+    *{
+        margin: 0;
+        border: 0;
+    }
+        nav{
+         width: 100%;
+        height: 30px;
+        display: flex;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        padding: 10px;
+        justify-content: space-between;
+        }
+        #toggle{
+          width: 18px;
+          height: 50px;
+          padding: 4px;
+          display: flex;
+          flex-direction: column;
+          cursor: pointer;
+        }
+        #toggle span{
+          margin-top: 3px;
+          background: grey;
+          border: 1px solid grey;
+       }
+       .left_side{
+          width: 140px;
+          height: 30px;
+          display: flex;
+          margin-left: 15px;
+          justify-content: space-between;
+        }
+
+        .right_side{
+            margin-right: 10%;
+        }
+        /* image seting */
+        .youtube_logo{
+            width: 88px;
+            height: 23px;
+            cursor: pointer;
+        }
+        .box{
+            width: 320px;
+            height: 28px;
+            margin-left: -18%;
+            border: 1px solid grey;
+            position: relative;   
+        }
+        .search_btn{
+            width: 60px;
+            height: 29px;
+           position: absolute;
+           background-color: rgb(238, 236, 236);
+           border: 1px solid grey;  
+           margin-left: 46px;
+         
+        }
+        .search_btn:hover{
+            background-color: rgb(226, 226, 228);
+            cursor: pointer;
+        }
+        input[type=text] {
+        outline: none;
+        }
+
+        input[type=text]:focus {
+        border: 0;
+        }
+        .icons,.s_icon{
+            width: 25px;
+            margin-left: 8px;
+        }
+        .my_image{
+             float: right;
+             margin-left: 20px;
+        }
+        .myimg{
+            width: 30px;
+            border-radius: 80%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+
+        /* panel */
+
+        .panel{
+            display: flex;
+        }
+     /* left side panel */
+
+     .left_sidebar{
+         width: 300px;
+         height: 1000px;
+        padding: 10px;
+        padding-left: 20px;
+         display: flex;
+         flex-direction: column;
+         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        
+     }
+     .left_sidebar div{
+         margin-top: 3px;
+         display: flex;
+         font-size: 24px;
+         font-weight: none;
+     }
+     .left_sidebar div>img{
+         margin-right: 12px;
+     }
+     img+h6{
+
+         margin-top: 7px;
+         cursor: pointer;
+     }
+     hr{
+         width: 100%;
+         margin-top: 10px;
+         margin-bottom: 10px;
+         background-color: gray;
+         color: grey;
+         padding: 0.51px;
+     }
+     
+    #container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        margin: auto;    
+        /* gap: 1px; */
+        padding: 10px;
+        text-align: center;
+        margin-top: 20px;
+          /* margin-left: 180px;         */
+    }
+    #container div{
+        cursor: pointer;
+    }
+    #container div>h5{
+        padding: 20px;
+    }
+    iframe{
+        width: 300px;
+        height: 200px;
+
+    }
+</style>
+<body>
+    <!-- class="search_bar"  -->
+            <nav class="navbar">
+                <div class="left_side">
+                    <div id="toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <img src="./images/youtube_logo.png" class="youtube_logo" alt="">
+                </div>
+
+                <div class="box">
+                    <input type="text" id="query" placeholder="Search">
+                    <button class="search_btn" onclick="search()"><img src="./images/search_icon.png" alt="" class="s_icon"></button>
+                </div>
+                <div class="right_side">
+                    <img src="./images/grid.png" class="icons" alt="">
+                    <img src="./images/bell.png" class="icons" alt="">
+                    <img src="./images/addvedio.png" class="icons" alt="">
+                    <div class="my_image">
+                        <img src="./images/photo id.jpg" class="myimg" alt="">
+                    </div>
+                </div>
+            </nav>
+
+
+
+            <div class="panel">
+                <div class="left_sidebar">
+                    <div>
+                        <img src="./images/home.png" class="side_icon" srcset="">
+                        <h6>Home</h6>
+                    </div>
+                    <div>
+                        <img src="./images/exp.png" class="side_icon" srcset="">
+                        <h6>Explore</h6>
+                    </div>
+                    <div>
+                        <img src="./images/subscription.png" class="side_icon" srcset="">
+                        <h6>Subscription</h6>
+                    </div>
+                    <hr>
+                    <div>
+                        <img src="./images/library.png" class="side_icon" srcset="">
+                        <h6>Library</h6>
+                    </div>
+                    
+                    <div>
+                        <img src="./images/his.png" class="side_icon" srcset="">
+                        <h6>History</h6>
+                    </div>
+                    <div>
+                        <img src="./images/vedio.png" class="side_icon" srcset="">
+                        <h6>Your Videos</h6>
+                    </div>
+                    <div>
+                        <img src="./images/history.png" class="side_icon" srcset="">
+                        <h6>Watch Later</h6>
+                    </div>
+                    <div>
+                        <img src="./images/like.png" class="side_icon" srcset="">
+                        <h6>Liked Videos</h6>
+                    </div>
+                
+            </div>
+            <div id="container"> 
+                <!-- // append data here -->
+              </div>
+            </div>
+           
+
+ 
+    
+</body>
+</html>
+<script>
+    let saveddata = JSON.parse(localStorage.getItem("youtube_data"));
+    let api_key = `AIzaSyBnkCBf_hG87F1TuxEw2gVmk8A0Z0yOpAw`;
+    
+    let search = async () =>{
+        let query = document.querySelector("#query").value;
+        console.log(query);
+        let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${query}&key=${api_key}`;
+        
+        
+        let res = await fetch(url);
+        let data = await res.json();
+        append(data.items);
+        console.log(data.items);
+        let x  = data.items;
+        localStorage.setItem("youtube_data" , JSON.stringify(x))
+    }
+
+    
+    // recomneded fetch 
+    let recom = async ()=>{
+        let recomded = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&regionCode=IN&key=${api_key}`;
+        let response = await fetch (recomded);
+        let recom_data = await response.json();
+         append(recom_data.items);
+        console.log(recom_data.items);
+    }
+     recom();
+    // console.log(saveddata);
+    
+    let append = (data) =>{
+    // console.log(data);
+    document.querySelector('#container').innerHTML = null;
+    
+    data.forEach(({id:{videoId},snippet:{title, thumbnails}})=>{
+        let div = document.createElement("div");
+        div.onclick =() =>{
+            saving(videoId,title);
+        }
+        let iframe = document.createElement("iframe");
+        iframe.src= `https://www.youtube.com/embed/${videoId}`
+
+         let thum = document.createElement("img");
+         thum.src = thumbnails.medium.url;
+        let titles = document.createElement("h5");
+        titles.innerText = title;
+        
+        div.append(iframe,titles);
+        document.querySelector('#container').append(div);
+    })
+}
+// append(saveddata);
+let saving = (videoId,title)=>{
+let data_saved = [videoId,title];
+localStorage.setItem("movies" ,JSON.stringify(data_saved));
+window.location.href = "./vedio.html";
+console.log(data_saved);
+}
+
+// <iframe width="560" height="315" src="https://www.youtube.com/embed/2EvEIZkgmkg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+
+
+</script>
